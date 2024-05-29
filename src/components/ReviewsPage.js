@@ -46,7 +46,12 @@ export default function ReviewsPage({ activeTab }) {
           </div>
           <div className="m-auto w-4/5 md:w-auto md:m-0 flex flex-col">
             {details.map((detail, index) => (
-              <UserReview name={detail.name} desc={detail.desc} key={index} />
+              <UserReview
+                name={detail.name}
+                desc={detail.desc}
+                index={index}
+                key={index}
+              />
             ))}
           </div>
         </div>

@@ -1,3 +1,4 @@
+// This is not used in the code, so you can remove it.
 import { useEffect } from "react";
 import Metrices from "./Metrices";
 import Info from "./Info";

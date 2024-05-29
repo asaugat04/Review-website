@@ -1,3 +1,5 @@
+// This is not used in the code, so you can remove it.
+
 export default function Info({ display }) {
   return (
     <div

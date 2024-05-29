@@ -1,3 +1,5 @@
+// This is not used in the code, so you can remove it.
+
 export default function Footer() {
   return (
     <footer className="footer mt-4 flex items-center justify-around">

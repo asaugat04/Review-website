@@ -52,7 +52,7 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
           <span className=" ml-5 font-bold">695</span> Reviews
         </div>
 
-        <div className="flex flex-row md:gap-3 md:flex-col companyReviews ml-1 mt-4">
+        <div className="flex flex-row md:gap-3 md:flex-col companyReviews md:w-2/5 ml-0 mt-4">
           <a
             className="company flex flex-col md:flex-row items-center"
             href="#"
@@ -67,7 +67,7 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
             />
             <span
               style={{ fontWeight: activeTab == "tripAdvisor" ? "bold" : "" }}
-              className=" text-sm  pl-2"
+              className=" text-sm  pl-2 inline-block w-[90px]"
             >
               <p className="flex flex-row gap-1">
                 Tripadvisor <span className="hidden md:block">Reviews</span>{" "}
@@ -89,9 +89,9 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
             />
             <span
               style={{ fontWeight: activeTab == "lonleyplanet" ? "bold" : "" }}
-              className=" text-sm  pl-2"
+              className=" text-sm  pl-2 w-[100px]"
             >
-              <p className="flex flex-row gap-1">
+              <p className="flex flex-row gap-1 w-max">
                 Lonleyplanet <span className="hidden md:block">Reviews</span>
               </p>
             </span>
@@ -111,7 +111,7 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
             />
             <span
               style={{ fontWeight: activeTab == "maps" ? "bold" : "" }}
-              className=" text-sm  pl-2"
+              className=" text-sm  pl-2 w-[60px]"
             >
               <p className="flex flex-row gap-1">
                 Maps <span className="hidden md:block">Reviews</span>
@@ -121,7 +121,7 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
         </div>
       </div>
       <div className=" md:pl-5 md:mt-2 hidden md:block">
-        <Progerssbar percentage={70} />
+        <Progerssbar percentage={80} />
       </div>
     </div>
   );

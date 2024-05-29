@@ -1,13 +1,10 @@
-export default function UserReview({ name, desc, rating }) {
+export default function UserReview({ name, desc, index }) {
   return (
     <div
       className="w-full my-3 px-4 border-b-2 rounded "
       style={{
-        backgroundColor: `rgba(${Math.floor(
-          Math.random() * 255 + 1
-        )},${Math.floor(Math.random() * 255 + 1)},${Math.floor(
-          Math.random() * 255 + 1
-        )},0.1)`,
+        backgroundColor:
+          index % 2 == 0 ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0.2)",
       }}
     >
       <div className="flex flex-row items-center">
@@ -48,7 +45,14 @@ export default function UserReview({ name, desc, rating }) {
         <div className="text-right text-xl mt-0 font-bold w-full">“</div>
       </div>
       <div className="flex flex-row items-center justify-start align-center">
-        <i class="fa-regular fa-heart mx-2 mb-3 "></i>
+        <i
+          onClick={(e) => {
+            if (e.target.style.color != "red") e.target.style.color = "red";
+            else e.target.style.color = "black";
+            // color == "red" ? (color = "black") : (color = "red");
+          }}
+          class="fa-regular fa-heart mx-2 mb-3 "
+        ></i>
         <i class="fa-solid fa-share mx-2 mb-3"></i>
         <i class="fa-regular fa-flag mx-2 mb-3"></i>
         <img
