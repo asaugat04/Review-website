@@ -52,7 +52,7 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
           <span className=" ml-5 font-bold">695</span> Reviews
         </div>
 
-        <div className="flex flex-row companyReviews ml-1 mt-4">
+        <div className="flex flex-row md:gap-3 md:flex-col companyReviews ml-1 mt-4">
           <a
             className="company flex flex-col md:flex-row items-center"
             href="#"
@@ -65,19 +65,18 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
               style={{ height: 40 }}
               src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logoset_solid_green.svg"
             />
-            <span className="hidden md:block text-xl font-bold pl-2 text-sm">
-              Tripadvisor Reviews
-            </span>
             <span
               style={{ fontWeight: activeTab == "tripAdvisor" ? "bold" : "" }}
-              className="md:hidden text-sm text-xl  pl-2"
+              className=" text-sm  pl-2"
             >
-              Tripadvisor
+              <p className="flex flex-row gap-1">
+                Tripadvisor <span className="hidden md:block">Reviews</span>{" "}
+              </p>
             </span>
           </a>
 
           <a
-            className="lonleyplanet flex flex-col md:flex-row items-center justify-between md:hidden"
+            className="lonleyplanet flex flex-col md:flex-row items-center md:justify-start justify-between "
             href="#"
             onClick={(e) => {
               e.preventDefault();
@@ -86,33 +85,37 @@ export default function ReviewViewer({ changeActiveTab, activeTab }) {
           >
             <img
               style={{ height: 40 }}
-              src="https://assets.reviews.io/img/all-global-assets/icons/icon-reporting--sm--colour.svg"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAMAAAAynjhNAAAAM1BMVEVHcEwAVdcAV9kAV9kAV9kAV9kAVtgAV9kAVtkAV9kAV9kAVtkAV9kAV9kAV9kAV9kAVthDEWDfAAAAEXRSTlMACWOw9P8ThC2SnETkd1bEIsqFdPEAAAEPSURBVHgBYiAWAMomCySGYRgIynBm+v9rG49GketcIbBiJcY6jy1nwxdG751NIYQM+HIZ1NasoS0O4e1JOwpDcgArKo0Q44RXWWjF0DCqzrfCEajgUOJ0U9NkhTM2TpcUW8WFUHe8ScH2Ee7SKuUdFqM2AK3SlsYmWjDPL/Es/dq4Cd1z8INGc+cgHMPBRUfqYg/3Ni7FZkdRs/GIjon0yVi96cL9aFTc/XqDD1w7WrHLtmekdawgBFJxY+QFt0fTHnRBtyByisvcNoq0al700EG98kacG1td7ovpkJP6j9k7aZZ+0swuPt8PiVZuIluJauOyZt3QNj8+LxHQ7FrVugZ9idRgOB7gtBdUhYv8ALYMDRVcD5H+AAAAAElFTkSuQmCC"
             />
             <span
               style={{ fontWeight: activeTab == "lonleyplanet" ? "bold" : "" }}
               className=" text-sm  pl-2"
             >
-              Lonleyplanet
+              <p className="flex flex-row gap-1">
+                Lonleyplanet <span className="hidden md:block">Reviews</span>
+              </p>
             </span>
           </a>
 
           <a
-            className="info flex flex-col  md:flex-row items-center md:hidden"
+            className="maps flex flex-col  md:flex-row items-center "
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              changeActiveTab("info");
+              changeActiveTab("maps");
             }}
           >
             <img
               style={{ height: 40 }}
-              src="https://assets.reviews.io/img/all-global-assets/icons/icon-information--sm--colour.svg"
+              src="https://lh3.googleusercontent.com/9tLfTpdILdHDAvGrRm7GdbjWdpbWSMOa0csoQ8pUba9tLP8tq7M4Quks1xuMQAVnAxVfryiDXRzZ-KDnkPv8Sm4g_YFom1ltQHjQ6Q"
             />
             <span
-              style={{ fontWeight: activeTab == "info" ? "bold" : "" }}
+              style={{ fontWeight: activeTab == "maps" ? "bold" : "" }}
               className=" text-sm  pl-2"
             >
-              Info
+              <p className="flex flex-row gap-1">
+                Maps <span className="hidden md:block">Reviews</span>
+              </p>
             </span>
           </a>
         </div>

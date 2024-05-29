@@ -1,6 +1,15 @@
 export default function UserReview({ name, desc, rating }) {
   return (
-    <div className="w-full border-b-2 md:m-auto md:w-auto">
+    <div
+      className="w-full my-3 px-4 border-b-2 rounded "
+      style={{
+        backgroundColor: `rgba(${Math.floor(
+          Math.random() * 255 + 1
+        )},${Math.floor(Math.random() * 255 + 1)},${Math.floor(
+          Math.random() * 255 + 1
+        )},0.1)`,
+      }}
+    >
       <div className="flex flex-row items-center">
         <div className="text-left font-bold text-xl mt-3">{name}</div>
         <div className="ratings-star ml-2 flex flex-row ">
@@ -33,7 +42,7 @@ export default function UserReview({ name, desc, rating }) {
       </div>
       <div className=" md:w-auto ">
         <span className="text-xl font-bold mb-0 pb-0">“</span>
-        <div className="flex text-lg lg:w-[40vw] text-sm break-keep md:w-full m-0 p-0">
+        <div className="flex text-lg lg:w-4/5 text-sm break-keep md:w-full m-0 p-0">
           {desc}
         </div>
         <div className="text-right text-xl mt-0 font-bold w-full">“</div>

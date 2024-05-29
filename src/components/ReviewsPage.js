@@ -31,7 +31,7 @@ export default function ReviewsPage({ activeTab }) {
     <div className="flex  justify-center md:gap-x-32 flex-col md:flex-row ">
       {/* <ReviewsPageLeft activeTab={activeTab} /> */}
       <div>
-        <div className="p-3 flex flex-col w-full ">
+        <div className="p-3 flex flex-col ">
           <GiveReviewStar />
           <div className="flex justify-end w-full md:w-full mx-auto ">
             Filter:
@@ -44,7 +44,7 @@ export default function ReviewsPage({ activeTab }) {
               <option value="5">1 Stars</option>
             </select>
           </div>
-          <div className="m-auto w-4/5 md:w-auto md:m-0">
+          <div className="m-auto w-4/5 md:w-auto md:m-0 flex flex-col">
             {details.map((detail, index) => (
               <UserReview name={detail.name} desc={detail.desc} key={index} />
             ))}

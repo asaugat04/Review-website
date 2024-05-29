@@ -50,7 +50,7 @@ export default function GiveReviewStar() {
 
   return (
     <>
-      <div class=" flex justify-center flex-row  md:m-auto md:ml-4">
+      <div class=" flex justify-center flex-row  md:m-auto md:ml-4 w-full">
         <picture>
           <source
             type="image/webp"
